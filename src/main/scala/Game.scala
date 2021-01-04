@@ -11,7 +11,7 @@ class Game(maxTurns: Int = 10) {
 
 
   def pins(pins: Int): Unit = {
-    require(pins > 0, "pins must be positive")
+    require(pins >= 0, "pins must be positive")
     val (currentM, nextM) = nextPinMultipliers
 
     // adjust the multiplier to no overcount the end game extra rolls

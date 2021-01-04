@@ -4,8 +4,8 @@ import org.scalatest.matchers.should.Matchers
 class GameSpec extends AnyFlatSpec with Matchers {
   "Game" should "sum pins" in {
     val game = new Game(3)
-    Seq(1, 2, 3, 4, 5, 4).foreach(game.pins)
-    game.score shouldBe ((1 + 2) + (3 + 4) + (5 + 4))
+    Seq(1, 2, 3, 4, 5, 0).foreach(game.pins)
+    game.score shouldBe ((1 + 2) + (3 + 4) + (5 + 0))
   }
 
   it should "handle spare" in {
